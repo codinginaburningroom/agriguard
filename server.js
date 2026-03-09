@@ -41,4 +41,7 @@ app.use((_, res) => res.status(404).json({ success: false, error: 'Not found' })
 app.use((e, _, res, __) => res.status(500).json({ success: false, error: e.message }));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 AgriGuard API → http://localhost:${PORT}`));
+
+app.listen(PORT, () => {
+  console.log(`🚀 AgriGuard API running on port ${PORT}`);
+});
